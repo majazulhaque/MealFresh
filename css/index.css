@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(241, 239, 226);
+}
+
+/*NavBar Section */
+#header-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(237, 191, 9);
+}
+#logo img{
+    width: 4rem;
+}
+#nav{
+    align-self: center;
+    margin-right: 5rem;
+}
+#nav a{
+    margin: 0rem 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+/* Search Section */
+#search-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+    
+}
+#search-input{
+    width: 35rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    border: none;
+    padding-left: 1rem;
+    border-radius: 10px 0px 0px 10px;
+}
+#search-btn{
+    font-size: 1.3rem;
+    border: none;
+    color: white;
+    background-color: rgb(5, 5, 165);
+    border-radius: 0px 10px 10px 0px;
+}
+/* Main Section */
+#meal-type{
+    padding-left: 2rem;
+    font-size: 2rem;
+}
+#middle-section{
+    width: 98vw;
+    padding: 0rem 0rem;
+    /* margin: 0rem 3rem; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.card-container{
+    width: 18rem;
+    height: 22rem;
+    background-color: white;
+    border-radius: 10px 10px;
+    margin: 1rem 2rem;
+
+}
+.item-img img{
+    border-radius: 10px 10px 0px 0px;
+    width: 18rem;
+    height: 18.5rem;
+}
+.item-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+
+.item-detail i{
+    font-size: 1.5rem;
+    color: rgb(243, 6, 6);
+}
+
+/* Footer Section*/
+#footer{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 3.5rem;
+    position:fixed;
+    bottom: 0px;
+    background-color: rgb(237, 191, 9);
+    font-size: 0.8rem;
+    justify-content: space-between;
+}
+.footer__copyright {
+    align-self: center;
+    padding-left: 1.5rem;
+    color: white;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+.thirty_miles_zone{
+    align-self: center;
+    padding-right: 1.5rem;
+}
+
+
+
+
