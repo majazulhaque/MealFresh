@@ -1,18 +1,26 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(241, 239, 226);
+    background-color: rgb(229, 223, 183);
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 /*NavBar Section */
 #header-section{
     display: flex;
     flex-direction: row;
+    height: 4.5rem;
     justify-content: space-between;
     background-color: rgb(237, 191, 9);
 }
-#logo img{
-    width: 4rem;
+#logo {
+    font-size: 1.6rem;
+    color: rgb(174, 5, 5);
+    padding: 1.3rem 2rem;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 #nav{
     align-self: center;
@@ -23,6 +31,8 @@ body{
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bolder;
+    color: rgb(5, 5, 94);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Search Section */
@@ -49,12 +59,18 @@ body{
     border-radius: 0px 10px 10px 0px;
 }
 /* Main Section */
+#introduction{
+    font-size: 3rem;
+    padding-top: 4rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(146, 147, 149);
+}
 #meal-type{
-    padding-left: 2rem;
-    font-size: 2rem;
+    margin-left: 2rem;
 }
 #middle-section{
     width: 98vw;
+    min-height: 48.7vh;
     padding: 0rem 0rem;
     /* margin: 0rem 3rem; */
     display: flex;
@@ -83,22 +99,27 @@ body{
     align-items: center;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
+    text-decoration: none;
 }
+a[href] {
+    text-decoration: none;
+  }
 
 .item-detail i{
     font-size: 1.5rem;
     color: rgb(243, 6, 6);
 }
 
+
 /* Footer Section*/
 #footer{
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 98.9vw;
     height: 3.5rem;
-    position:fixed;
+    position:static;
     bottom: 0px;
-    background-color: rgb(237, 191, 9);
+    background-color: rgb(206, 166, 7);
     font-size: 0.8rem;
     justify-content: space-between;
 }
@@ -106,11 +127,85 @@ body{
     align-self: center;
     padding-left: 1.5rem;
     color: white;
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 .thirty_miles_zone{
     align-self: center;
     padding-right: 1.5rem;
+}
+
+
+
+/* Meal detail section*/
+
+#meal-container{
+    background-color: white;
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 4rem;
+}
+#meal-container img{
+    width: 20rem;
+    height: 20rem;
+}
+#meal-instruction{
+    padding: 0rem 4rem;
+}
+#meal-name{
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+    text-decoration: none;
+}
+#fav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#fav i{
+    font-size: 1.5rem;
+    color: rgb(243, 6, 6);
+}
+
+#cat-area{
+    margin-top: 0rem;
+    padding-left: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    color: gray;
+}
+#instruction{
+    word-spacing: 0.3em;
+    font-family:'Times New Roman', Times, serif;
+}
+#meal-ingredient ul{
+    width: 50rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    list-style: none;
+}
+#meal-ingredient ul li{
+    width: 15rem;
+    margin-right: 1.5rem;
+    font-size: 1.1rem;
+    position: relative;
+    
+}
+#meal-ingredient ul li:before{
+    content: "•";
+    position: absolute;
+    left: -1rem;
+    top: 0.1em;
+    padding-top: 1.5rem;
 }
 
 
