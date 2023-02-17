@@ -15,9 +15,9 @@
   <body>
     <!--Header NavBar Section -->
     <section id="header-section">
-      <span id="logo">MealFresh</span>
+      <span onclick="mealClickLoad()" id="logo">MealFresh</span>
       <span id="nav">
-        <a href="#">Home</a>
+        <a onclick="homeClickLoad()" href="#">Home</a>
         <a onclick="favClickLoad()" href="#">Favourite</a>
         <a href="#">Categories</a>
         <a href="#">About</a>
@@ -36,8 +36,9 @@
     <h4 id="no-meal-found"></h4>
     <!--Content Section-->
     <h2 id="meal-type">Favourite Meals:-</h2>
-    <section id="mealDetailSection">
-    </section>
+    <!-- Meal Detail Section-->
+    <section id="mealDetailSection"></section>
+    <!--Meal card Section to show all Meal result-->
     <section id="middle-section">
       <div id="introduction"></div>
     </section>

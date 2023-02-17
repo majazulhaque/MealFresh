@@ -7,7 +7,7 @@ html {
     scroll-behavior: smooth;
   }
 
-/*NavBar Section */
+/* Header NavBar Section */
 #header-section{
     display: flex;
     flex-direction: row;
@@ -119,32 +119,6 @@ a[href] {
 }
 
 
-/* Footer Section*/
-#footer{
-    display: flex;
-    flex-direction: row;
-    width: 98.9vw;
-    height: 3.5rem;
-    position:static;
-    bottom: 0px;
-    background-color: rgb(206, 166, 7);
-    font-size: 0.8rem;
-    justify-content: space-between;
-}
-.footer__copyright {
-    align-self: center;
-    padding-left: 1.5rem;
-    color: white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-}
-.thirty_miles_zone{
-    align-self: center;
-    padding-right: 1.5rem;
-}
-
-
-
 /* Meal detail section*/
 
 #meal-container{
@@ -237,6 +211,33 @@ a[href] {
     left: -1rem;
     top: 0.1em;
     padding-top: 1.3rem;
+}
+
+
+
+
+/* Footer Section*/
+#footer{
+    display: flex;
+    flex-direction: row;
+    width: 98.9vw;
+    height: 3.5rem;
+    position:static;
+    bottom: 0px;
+    background-color: rgb(206, 166, 7);
+    font-size: 0.8rem;
+    justify-content: space-between;
+}
+.footer__copyright {
+    align-self: center;
+    padding-left: 1.5rem;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.thirty_miles_zone{
+    align-self: center;
+    padding-right: 1.5rem;
 }
 
 

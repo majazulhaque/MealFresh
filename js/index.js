@@ -1,6 +1,7 @@
 var searchInput = document.getElementById("search-input");
 var searchBtn = document.getElementById("search-btn");
 
+/* function to get the search input data and fetch the resultant data from Meal API */
 searchInput.addEventListener("input", function () {
   var inputVal = searchInput.value.trim();
   if (!searchInput.value) {
@@ -9,8 +10,6 @@ searchInput.addEventListener("input", function () {
   } else {
     document.getElementById("meal-type").innerText = `Search by ${inputVal}:-`;
   }
-  //   document.getElementById('middle-section').innerHTML = ``;
-  //   document.getElementById('mealDetailSection').innerHTML = ``;
   console.log(inputVal);
   const apiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${inputVal}`;
   fetch(apiUrl)
@@ -26,6 +25,7 @@ searchInput.addEventListener("input", function () {
     });
 });
 
+/* Method to traverse over each resultant result and send to the function to create Card div*/
 const mealDetailSection = (data, mealInput) => {
   const meal = data.meals;
 
@@ -38,6 +38,7 @@ const mealDetailSection = (data, mealInput) => {
   }
 };
 
+/* Method to create the card div and add all required data to each card */
 const createMealInfoDiv = (meal, mealInput) => {
   const mealPhoto = meal.strMealThumb;
   const mealName = meal.strMeal;
@@ -72,6 +73,7 @@ const createMealInfoDiv = (meal, mealInput) => {
   }
 };
 
+/* Method to get meal details from API using ID of the meal */
 const getMealDetails = (mealID) => {
   const mealDetailsSection = document.getElementById("mealDetailSection");
   mealDetailsSection.innerHTML = ``;
@@ -84,6 +86,7 @@ const getMealDetails = (mealID) => {
     });
 };
 
+/** Function to create the detail div and set the required detail on the div */
 const showMealDetailsDiv = (data) => {
   console.log(data);
   const meal = data.meals[0];
@@ -149,6 +152,7 @@ const showMealDetailsDiv = (data) => {
   }
 };
 
+/** Function to add the meal into Fav local storage and change the icon accordingly */
 const saveFavorite = (favID) => {
   const iconID = document.getElementById(`${favID}`);
   if (iconID.className.includes("fa-regular")) {
@@ -188,7 +192,7 @@ const saveFavorite = (favID) => {
   //   console.log(favID);
 };
 
-// To handle the dynamic App Name shown.
+/* To handle the dynamic App Name shown and fetch the fav meal detail from API using meal ID*/
 const refreshFunction = () => {
   const showFav = JSON.parse(localStorage.getItem("favorites"));
   if (showFav.length === 0) {
@@ -216,7 +220,6 @@ const refreshFunction = () => {
       fetch(url)
         .then((res) => res.json())
         .then((data) => {
-          // createMealInfoDiv(data);
           showFavoriteMeal(data);
           //   console.log(data);
         });
@@ -224,6 +227,7 @@ const refreshFunction = () => {
   }
 };
 
+/** Function to create the meal detail div and set the required data and show on screen */
 const showFavoriteMeal = (data) => {
   const meal = data.meals[0];
   const mealPhoto = meal.strMealThumb;
@@ -251,8 +255,17 @@ const showFavoriteMeal = (data) => {
   mealinfoSection.appendChild(mealInfoDiv);
 };
 
+/** Execute when reload the page */
 document.addEventListener("DOMContentLoaded", refreshFunction);
 
+/** Reload when favourite nav is clicked */
 function favClickLoad() {
+  location.reload();
+}
+function mealClickLoad() {
+  location.reload();
+}
+
+function homeClickLoad() {
   location.reload();
 }
