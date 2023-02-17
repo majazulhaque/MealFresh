@@ -87,6 +87,12 @@ html {
     margin: 1rem 2rem;
 
 }
+.card-container:hover{
+    background: linear-gradient(to bottom,#cbcaca 85%, #f1e7e7 , #cbcaca);
+    opacity: 0.95;
+   
+    
+}
 .item-img img{
     border-radius: 10px 10px 0px 0px;
     width: 18rem;
@@ -100,6 +106,8 @@ html {
     padding-left: 0.7rem;
     padding-right: 0.7rem;
     text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bolder;
 }
 a[href] {
     text-decoration: none;
@@ -149,6 +157,23 @@ a[href] {
     border-radius: 10px;
     margin: auto;
     margin-bottom: 4rem;
+    box-shadow: 10px 10px 15px gray;
+}
+#meal-image-source{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+#source-link{
+    padding-top: 2rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    align-self: center;
+}
+#image-link:hover{
+    opacity: 0.9;
 }
 #meal-container img{
     width: 20rem;
@@ -192,6 +217,12 @@ a[href] {
     flex-direction: row;
     flex-wrap:wrap;
     list-style: none;
+    margin-top: 0px;
+}
+#meal-ingredient span{
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: bolder;
 }
 #meal-ingredient ul li{
     width: 15rem;
@@ -205,7 +236,7 @@ a[href] {
     position: absolute;
     left: -1rem;
     top: 0.1em;
-    padding-top: 1.5rem;
+    padding-top: 1.3rem;
 }
 
 
